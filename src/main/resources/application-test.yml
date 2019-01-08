@@ -1,0 +1,36 @@
+#application名称，选择配置头，数据源配置
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 500
+      minimum-idle: 50
+    url: jdbc:mysql://localhost:3306/datav?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&autoReconnect=true
+    username: root
+    password: root
+  servlet:
+    multipart:
+      max-file-size: 500mb
+      max-request-size: 500mb
+#mybatis的配置
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/**/*.xml
+management:
+  security:
+    enabled: false
+#pagehelper分页插件配置
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+
+logging:
+  config: classpath:logback-spring.xml
+  path: D:\\logs\\${spring.application.name}
+  level:
+    com:
+      neo:
+        mapper: ERROR

@@ -1,0 +1,64 @@
+#端口号
+server:
+  port: 8080
+#application名称，选择配置头，数据源配置
+spring:
+  application:
+    name: spring-boot-hello
+  profiles:
+    active: test
+#    type: com.zaxxer.hikari.HikariDataSource
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    hikari:
+#      maximum-pool-size: 500
+#      minimum-idle: 50
+#  servlet:
+#    multipart:
+#      max-file-size: 500mb
+#      max-request-size: 500mb
+##mybatis的配置
+#mybatis:
+#  config-location: classpath:mybatis/mybatis-config.xml
+#  mapper-locations: classpath:mybatis/mapper/**/*.xml
+#management:
+#  security:
+#    enabled: false
+##pagehelper分页插件配置
+#pagehelper:
+#  helperDialect: mysql
+#  reasonable: true
+#  supportMethodsArguments: true
+#  params: count=countSql
+#---
+#spring:
+#  profiles: dev
+#  datasource:
+#    primary:
+#      jdbcUrl: jdbc:mysql://localhost:3306/test?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&autoReconnect=true
+#      username: root
+#      password: root
+#    secondary:
+#      jdbcUrl: jdbc:mysql://rm-bp13v3n2k602o06wdco.mysql.rds.aliyuncs.com:3306/datav?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&autoReconnect=true
+#      username: datav
+#      password: datav@N3d9
+#logging:
+#  config: classpath:logback-spring.xml
+#  path: D:\\logs\\spring-boot-hello
+#  level:
+#    com:
+#      neo:
+#        mapper: DEBUG
+#---
+#spring:
+#  profiles: release
+#  datasource:
+#    url: jdbc:mysql://rm-bp13v3n2k602o06wd.mysql.rds.aliyuncs.com:3306/datav?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&autoReconnect=true
+#    username: datav
+#    password: datav@N3d9
+#---
+#spring:
+#  profiles: product
+#  datasource:
+#    url: jdbc:mysql://rm-bp116s5ccejvn73k0.mysql.rds.aliyuncs.com:3306/datav?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&autoReconnect=true
+#    username: datav
+#    password: wMrW2Me=Jv*jz+c
